@@ -1,4 +1,7 @@
 import React, { useEffect, useReducer } from "react";
+import axios from "axios";
+
+const url = "https://hookproject-a7d09-default-rtdb.firebaseio.com/hooks.json";
 
 const reducer = (state, action) => {
   console.log("state", state, "action", action);
@@ -9,6 +12,9 @@ function Hooks() {
 
   useEffect(() => {
     dispatch({ type: "REQUEST" });
+    axios.get(url).then((res) => {
+      dispatch({ type: "SUCCESS", data: res.data });
+    });
   }, []);
 
   return (
