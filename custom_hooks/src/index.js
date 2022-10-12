@@ -1,14 +1,14 @@
 import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
+import Hooks from "./Hooks";
 import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
   <StrictMode>
-    <App />
+    <Hooks />
   </StrictMode>
 );
 
