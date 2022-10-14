@@ -15,6 +15,12 @@ function Hooks() {
     post({ chave: "value", key: "value1", valor: 10 });
   };
 
+  const deleteNew = () => {
+    remove(
+      "https://hookproject-a7d09-default-rtdb.firebaseio.com/delete/.json"
+    );
+  };
+
   if (data.loading) {
     return <p>Loading...</p>;
   }
@@ -26,6 +32,8 @@ function Hooks() {
       <pre>{JSON.stringify(data2)}</pre>
       <button onClick={saveNew}>Save</button>
       <pre>{JSON.stringify(postData)}</pre>
+      <button onClick={deleteNew}>Delete</button>
+      <pre>{JSON.stringify(removeData)}</pre>
     </div>
   );
 }
