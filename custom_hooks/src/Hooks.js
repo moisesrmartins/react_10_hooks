@@ -1,8 +1,9 @@
 import React from "react";
 import useGet from "./useGet";
 import usePost from "./usePost";
+import useRemove from "./useRemove";
 
-const url = "https://hookproject-a7d09-default-rtdb.firebaseio.com/hooks.json";
+const url = "https://hookproject-a7d09-default-rtdb.firebaseio.com/delete.json";
 
 function Hooks() {
   const data = useGet(url);
