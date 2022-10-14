@@ -9,6 +9,7 @@ function Hooks() {
   const data = useGet(url);
   const data2 = useGet("https://httpbin.org/ip");
   const [postData, post] = usePost(url);
+  const [removeData, remove] = useRemove(url);
 
   const saveNew = () => {
     post({ chave: "value", key: "value1", valor: 10 });
